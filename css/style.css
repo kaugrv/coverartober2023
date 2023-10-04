@@ -1,0 +1,129 @@
+/*** CSS Styles  ***/
+
+/* Général  */
+body {
+	background-color: #e9f1f9;
+	background-image: url('../images/fond.png');
+	background-size: cover;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+	font-weight: normal;
+	color: #002963;
+	margin: 0;
+}
+
+h3 {
+	font-size: small;
+	font-weight: normal;
+	opacity: 50%;
+	margin-top: 0;
+}
+
+header img {
+	width: 100vw;
+	position: fixed;
+	margin-top: 0;
+	z-index: 10;
+
+}
+
+footer {
+	width: 100vw;
+	background-image: url('../images/footer.png');
+	position:fixed;
+	bottom:0;
+	z-index: 11;
+	padding: 8px;
+	text-align: center;
+}
+
+button {
+	/* background-color: e0e8f0;
+	border: 2px solid #737e8d; 
+	cursor: pointer;
+	width: 70px;
+	height: 30px; */
+  }
+
+  /* button:hover {
+	background-color: #daf4f8;
+  }
+
+  button:focus {
+	background-color: white;
+  } */
+
+
+.albums-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 120px);
+
+	width: fit-content;
+	float: right;
+	margin-top: 100px;
+	margin-right: 100px;
+
+}
+
+.grid-item {
+	margin: 5px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+.grid-item:hover {
+	transform: scale(1.1);
+	transition-duration: 0.3s;
+}
+
+.grid-item img {
+	max-width: 100%; 
+	height: auto; 
+	
+	border: solid black 1px;
+  }
+
+  .player {
+	position: absolute;
+	padding: 100px;
+  }
+
+  .cd {
+	max-width: 500px; 
+	width: 50vw;
+	animation: none;
+
+	
+  }
+
+  @keyframes cd-turning {
+	0% {
+	  transform: rotate(0deg);
+	}
+  
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+
+
+.album-player, .photo {
+	width: 500px;
+	margin-top: 10px;
+}
+
+.album-player {
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	transition-duration: 0.5s;
+}
+
+
+.album-player:hover {
+	transform:  rotate(-2deg);
+	transition-duration: 0.5s;
+}
+
