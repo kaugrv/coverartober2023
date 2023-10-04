@@ -82,3 +82,7 @@ function set_album_grid() {
             div.innerHTML = '<img id="photo" class="photo" src="images/photos/'+albumActuel+'.png"/>';
             break;
     }}
+
+    let stars = document.querySelector('.stars');
+    stars.addEventListener('mouseover', function() {stars.innerHTML="★★★★★";});
+    stars.addEventListener('mouseout', function() {stars.innerHTML="☆☆☆☆☆";});

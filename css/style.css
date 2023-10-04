@@ -1,5 +1,9 @@
 /*** CSS Styles  ***/
 
+.credit {
+	display: none;
+}
+
 /* Général  */
 body {
 	background-color: #e9f1f9;
@@ -27,7 +31,6 @@ header img {
 	position: fixed;
 	margin-top: 0;
 	z-index: 10;
-
 }
 
 footer {
@@ -38,34 +41,17 @@ footer {
 	z-index: 11;
 	padding: 8px;
 	text-align: center;
+	color: #002963;
 }
-
-button {
-	/* background-color: e0e8f0;
-	border: 2px solid #737e8d; 
-	cursor: pointer;
-	width: 70px;
-	height: 30px; */
-  }
-
-  /* button:hover {
-	background-color: #daf4f8;
-  }
-
-  button:focus {
-	background-color: white;
-  } */
-
 
 .albums-grid {
 	display: grid;
 	grid-template-columns: repeat(5, 120px);
-
 	width: fit-content;
-	float: right;
+	position: absolute;
+	right: 0;
 	margin-top: 100px;
 	margin-right: 100px;
-
 }
 
 .grid-item {
@@ -82,21 +68,19 @@ button {
 .grid-item img {
 	max-width: 100%; 
 	height: auto; 
-	
 	border: solid black 1px;
   }
 
   .player {
-	position: absolute;
+	float: left;
 	padding: 100px;
+	position: absolute;
   }
 
   .cd {
-	max-width: 500px; 
-	width: 50vw;
 	animation: none;
-
-	
+	width: 30vw;
+	padding: 5%;
   }
 
   @keyframes cd-turning {
@@ -112,7 +96,7 @@ button {
 
 
 .album-player, .photo {
-	width: 500px;
+	width: 30vw;
 	margin-top: 10px;
 }
 
@@ -127,3 +111,36 @@ button {
 	transition-duration: 0.5s;
 }
 
+.stars {
+	cursor: pointer;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+	header, footer {
+		display: none;
+	}
+	.albums-grid {
+		display: grid;
+		grid-template-columns: repeat(6, 50px);
+		padding: 10px;
+		margin-top: 100px 50px;
+		position: relative;
+	}
+	.player {
+		position: relative;
+		top: 0;
+		right: 0;
+		padding: 50px;
+	}
+
+	.credit {
+		display: inline;
+		padding: 10px;
+		font-size: small;
+		color: #002963;
+		text-align: center;
+	}
+  }
