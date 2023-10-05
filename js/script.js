@@ -1,4 +1,4 @@
-let albumsDone = 3;
+let albumsDone = 4;
 let albumsTotal = 31;
 
 let albumActuel = 0;
