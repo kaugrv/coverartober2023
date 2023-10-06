@@ -1,9 +1,9 @@
-let albumsDone = 4;
-let albumsTotal = 31;
+let albumsDone = 6;
+let albumsTotal = 35;
 
 let albumActuel = 0;
 
-let titres = [" ", "sunflower lake", "hyperpink", "Night shift", "computer garden", "plus2love", "son smile", "MACHINE"];
+let titres = [" ", "sunflower lake", "hyperpink", "Night shift", "computer garden", "plus2love", "son smile", "MACHINE", "The future of music", "Bismuth","Spiral","waterfall song","LOW RESOLUTION", "misplaced thoughts", "bridges", "FRAGILE", "Hit me up, sunshine!", "so ok","à contre courant", "64era", "The butterfly effect", "J'entends encore l'orage", "Why2k", "(not) so many options", "moon children", "stuck dans mon phone", "Decay", "god compleX", "Tow truck road trip", "everything we need is already here", "410,757,864,530 DEAD CAPS", "Hapiness has to be fought for."];
 
 document.querySelector('#CD-button').disabled = true;
 document.querySelector('#album-button').disabled = true;
@@ -20,6 +20,7 @@ function select_album(n) {
 
     date.innerHTML= String("0" + n).slice(-2) + " Oct 2023";
     titre.innerHTML = titres[n];
+    if (n > 31) {date.innerHTML = "done :)"; titre.innerHTML="Sans titre"}
     
 
     if (n<=albumsDone) { 
@@ -37,6 +38,9 @@ function select_album(n) {
     }
 
     document.querySelector('#cd').style.animation = 'cd-turning 6s linear infinite';
+    if (albumActuel == 6) {document.querySelector('#cd').style.animation = 'cd-turning 15s linear infinite';
+    document.querySelector('#cd').style.width = '300px';
+    document.querySelector('#cd').style.margin = '50px';}
 
 }
 
@@ -71,7 +75,10 @@ function set_album_grid() {
         case 0:
             console.log('cd');
             div.innerHTML = '<img id="cd" class="cd" src="images/cd/'+albumActuel+'.png"/>';
-            document.querySelector('#cd').style.animation = 'cd-turning 6s linear infinite'; 
+            document.querySelector('#cd').style.animation = 'cd-turning 6s linear infinite';
+            if (albumActuel == 6) {document.querySelector('#cd').style.animation = 'cd-turning 15s linear infinite';
+            document.querySelector('#cd').style.width = '300px';
+            document.querySelector('#cd').style.margin = '50px';} 
             break;
         case 1:
             console.log('album');
