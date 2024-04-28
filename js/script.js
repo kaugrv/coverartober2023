@@ -1,4 +1,4 @@
-let albumsDone = 6;
+let albumsDone = 24;
 let albumsTotal = 35;
 
 let albumActuel = 0;
@@ -38,11 +38,23 @@ function select_album(n) {
     }
 
     document.querySelector('#cd').style.animation = 'cd-turning 6s linear infinite';
-    if (albumActuel == 6) {document.querySelector('#cd').style.animation = 'cd-turning 15s linear infinite';
-    document.querySelector('#cd').style.width = '300px';
-    document.querySelector('#cd').style.margin = '50px';}
+
+    if (albumActuel == 6) {
+        document.querySelector('#cd').style.animation = 'none';
+        document.querySelector('#cd').style.width = '20vw';
+        document.querySelector('#cd').style.margin = '50px';
+    }
+
+    if (albumActuel == 19) {
+        document.querySelector('#cd').style.animation = 'none';
+        // div.innerHTML = '<img id="cd" class="cd" src="images/cd/19.png"/> <img class="rond-cassette-gauche" src="images/cd/19_a.png"/> <img class="rond-cassette-droite" src="images/cd/19_b.png"/> '
+
+    }
+    
 
 }
+
+
 
 
 function set_album_grid() {
@@ -76,13 +88,20 @@ function set_album_grid() {
             console.log('cd');
             div.innerHTML = '<img id="cd" class="cd" src="images/cd/'+albumActuel+'.png"/>';
             document.querySelector('#cd').style.animation = 'cd-turning 6s linear infinite';
-            if (albumActuel == 6) {document.querySelector('#cd').style.animation = 'cd-turning 15s linear infinite';
-            document.querySelector('#cd').style.width = '300px';
+            if (albumActuel == 6) {document.querySelector('#cd').style.animation = 'none';
+            document.querySelector('#cd').style.width = '20vw';
             document.querySelector('#cd').style.margin = '50px';} 
+            if(albumActuel == 19) { document.querySelector('#cd').style.animation = 'none';}
             break;
         case 1:
             console.log('album');
             div.innerHTML = '<img id="album-player" class="album-player" src="images/albums/'+albumActuel+'.png"/>';
+            if (albumActuel==19) {
+                document.querySelector('#album-player').style.boxShadow = 'none';
+            }
+            else {
+                document.querySelector('#album-player').style.boxShadow = '3px 3px 3px rgba(0,0,0,0.5);';
+            }
             break;
         case 2:
             console.log('photo');

@@ -111,14 +111,38 @@ footer {
 	transition-duration: 0.5s;
 }
 
+#cd-album-photo {
+	position: absolute;
+}
+
+/* .rond-cassette-gauche,
+.rond-cassette-droite {
+	width: 4vw;
+	position: absolute;
+	top:20vh;
+	padding: 5%;
+	animation: cd-turning 6s infinite linear;
+}
+
+.rond-cassette-gauche {
+	left:7vw;
+}
+
+.rond-cassette-droite {
+	left:14vw;
+} */
+
+
 .stars {
 	cursor: pointer;
 }
 
 
+
+
 /* Responsive */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 	header, footer {
 		display: none;
 	}
@@ -128,6 +152,7 @@ footer {
 		padding: 10px;
 		margin-top: 100px 50px;
 		position: relative;
+		left: 10%;
 	}
 	.player {
 		position: relative;
@@ -136,11 +161,21 @@ footer {
 		padding: 50px;
 	}
 
+	.cd {
+		width:50vw;
+	}
+
+	.album-player, .photo {
+		width: 50vw;
+		margin-top: 10px;
+	}
+
 	.credit {
 		display: inline;
 		padding: 10px;
-		font-size: small;
 		color: #002963;
 		text-align: center;
+		position: absolute;
+		left: 10%;
 	}
   }
